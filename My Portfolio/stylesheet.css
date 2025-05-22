@@ -1,0 +1,583 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: white;
+}
+
+/* ------------NavBar Section start---------- */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+
+.navbar a {
+    transition: background 0s, transform 0s;
+}
+
+.navbar a:hover {
+    color: aqua;
+    transform: translateY(-5px);
+}
+/* --------NavBar Section end------------ */
+
+/* --------Home Section start------------ */
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(images/Background.avif)no-repeat;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-bar {
+    max-width: 600px;
+}
+
+.home-bar h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-bar h3:nth-last-of-type(2) {
+    margin-bottom: 30px;
+    animation: slidTop is 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-bar h3 span {
+    color: aqua;
+}
+
+.home-bar h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-bar p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid aqua;
+    font-size: 20px;
+    color: aqua;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+    margin: 30px 15px 30px 0;
+}
+
+.home-icon a:hover {
+    background: aqua;
+    color: black;
+    box-shadow: 0 0 20px aqua;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: aqua;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px aqua,
+        0 0 25px aqua
+}
+
+.button-icon {
+    margin-block: auto;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan
+}
+
+.images {
+    width: 45%;
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+}
+
+.images img {
+    height: 90%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover .image1 {
+    left: 45%;
+}
+
+/* --------Home Section end------------ */
+
+/* -------------About section start----------- */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: linear-gradient(to right, #000000, #434343);
+    padding-bottom: 6rem;
+}
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.about-img {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 90%;
+    border-radius: 50%;
+    border: aqua;
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid brown;
+    border-bottom: .2rem solid brown;
+    border-left: .2rem solid aqua;
+    border-right: .2rem solid aqua;
+}
+
+
+.about-content {
+    text-align: justify;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+
+.about-content h3 {
+    font-synthesis: 2.6rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.heading span {
+    color: aqua;
+}
+
+/* ---------About section end---------- */
+
+/* ----------Skills Section start------ */
+.skills {
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: linear-gradient(to right, #000000, #434343);
+
+}
+
+.skills .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    color: white;
+    justify-content: center;
+}
+
+
+.skills-row .skills-column {
+    flex: 1 1 100px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.skills-column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+    text-align: center;
+}
+
+.skills-box .skills-content {
+    position: relative;
+    z-index: 0;
+    border: .2rem solid aqua;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+}
+
+.skills-box .skills-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #262626;
+    z-index: -1;
+    transition: .5s;
+}
+
+.skills-box .skills-content:hover::before {
+    width: 100%;
+}
+
+.skills-content .progress {
+    padding: 1rem 1;
+    color: white;
+}
+
+.skills-content .progress h3 {
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-content .progress h3 span {
+    color: white;
+}
+
+.skills-content .progress .bar {
+    height: 20px;
+    border-radius: .6rem;
+    border: .2rem solid aqua;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.skills-content .progress .bar span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: .2rem;
+    background: aqua;
+}
+
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+    width: 90%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+    width: 70%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+    width: 60%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+    width: 80%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
+    width: 60%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+    width: 80%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+    width: 80%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
+    width: 100%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+    width: 90%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
+    width: 80%;
+}
+
+/* --------Skills Section end------------ */
+
+/* -------Service Section Start-------------- */
+#services {
+    padding: 30px 0;
+    background: linear-gradient(to right, #000000, #434343);
+}
+
+.sub-title {
+    text-align: center;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 80px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.services-list div {
+    background: #262630;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+    transition: background 0.5s, transform 0.5s;
+    text-align: justify;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div:hover {
+    background: #ff004f;
+    transform: translate(-10px);
+}
+
+/* ---------Service section end---------- */
+
+/* --------Contact Section start------------ */
+.heading-contact {
+    font-size: 5rem;
+    text-align: center;
+    background-color: black;
+}
+
+.heading-contact span {
+    color: aqua;
+}
+
+.contact {
+    background: black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.contact-text {
+    margin-left: 10%;
+}
+
+.contact-text h4 {
+    color: white;
+    margin: 18px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text h2 {
+    font-size: 80px;
+    line-height: 1;
+}
+
+.contact-text p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.list {
+    margin-bottom: 2.8rem;
+    list-style: none;
+}
+
+.list li i{
+    font-size: 25px;
+}
+
+.list li a {
+    display: block;
+    color: aqua;
+    font-size: 18px;
+    transition: all .45s ease;
+    text-decoration: none;
+}
+
+.list li a:hover {
+    color: white;
+    transform: translate(5px);
+}
+
+.contact-form {
+    margin-right: 10%;
+}
+
+.contact-form form {
+    position: relative;
+}
+
+.contact-form form input,
+form textarea {
+    width: 100%;
+    padding: 14px;
+    background: #262626;
+    color: white;
+}
+
+.contact-form .submit {
+    display: inline-block;
+    font-size: 16px;
+    background: aqua;
+    color: black;
+    width: 160px;
+    transition: all .45s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.contact-form .submit:hover {
+    transform: scale(1.1);
+}
+
+.copyright-txt {
+    background-color: black;
+    text-align: center;
+    font-size: 15px;
+} 
+/*------Contact Section end----------  */
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
